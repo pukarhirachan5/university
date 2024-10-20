@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Programs - UniHealth</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">UniHealth</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+   
+    
+        <div class="auth-buttons">
+            <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+            <button class="signup-btn" onclick="window.location.href='signup.html'">Signup</button>
+        </div>
+    </nav>
+
+   
+    <section class="programs-section">
+        <h1>Our Programs</h1>
+        <p>Choose a program that suits your needs.</p>
+
+        <div class="program-container">
+
+            <!-- Program Item -->
+            <div class="program-item">
+                <h2>Mindfulness Program</h2>
+                <p>This program focuses on techniques to improve mental well-being through mindfulness practices.</p>
+                <button onclick="openSignupForm('Mindfulness Program')">Sign Up</button>
+            </div>
+
+            <!-- Program Item -->
+            <div class="program-item">
+                <h2>Therapeutic Support</h2>
+                <p>Receive personalized therapeutic support tailored to your individual needs.</p>
+                <button onclick="openSignupForm('Therapeutic Support')">Sign Up</button>
+            </div>
+
+            <!-- Add more programs as needed -->
+        </div>
+    </section>
+
+    
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignupForm()">&times;</span>
+            <h2>Sign Up for <span id="programName"></span></h2>
+            <form id="signupForm" onsubmit="handleSignup(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="contact">Contact:</label>
+                <input type="text" id="contact" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - UniHealth</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">UniHealth</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+   
+    
+        <div class="auth-buttons">
+            <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+            <button class="signup-btn" onclick="window.location.href='signup.html'">Signup</button>
+        </div>
+    </nav>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h1>Frequently Asked Questions</h1>
+        <!-- <p>Get answers to your questions</p> -->
+
+        <div class="faq-container">
+            <div class="faq-sidebar">
+                <ul>
+                    <li><a href="#">How It Works?</a></li>
+                    <li><a href="#">Appointment & Scheduling</a></li>
+                    <li><a href="#">Program Availability & Costs</a></li>
+                    <li><a href="#">Rescheduling & Cancellations</a></li>
+                    <li><a href="#">Therapist Profile</a></li>
+                </ul>
+            </div>
+
+            <div class="faq-content">
+                <h2>How It Works?</h2>
+
+                <!-- FAQ Item -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How do I get started with using the platform?
+                        <span class="arrow">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To get started, simply sign up, complete your profile, and schedule your first appointment. You can choose a therapist and find a program that suits your needs.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How does the mental health assessment process work?
+                        <span class="arrow">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The mental health assessment is conducted by your therapist during your first session. It helps to determine the best course of treatment for you.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What type of support can I expect from the platform?
+                        <span class="arrow">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can expect a range of support, including therapy sessions, educational resources, and progress tracking, all tailored to your needs.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How much does everything cost?
+                        <span class="arrow">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The cost depends on the program you select and your insurance coverage. You can find detailed pricing on the 'Programs' page or contact support for more information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

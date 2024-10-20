@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - UniHealth</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">UniHealth</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+   
+    
+        <div class="auth-buttons">
+            <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+            <button class="signup-btn" onclick="window.location.href='signup.html'">Signup</button>
+        </div>
+    </nav>
+    <!-- Login Form Section -->
+    <section class="auth-section">
+        <h2>Login to Your Account</h2>
+        <form class="auth-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit" class="auth-btn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Signup here</a>.</p>
+    </section>
+
+</body>
+</html>

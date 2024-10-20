@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniHealth</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">UniHealth</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+   
+    
+        <div class="auth-buttons">
+            <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+            <button class="signup-btn" onclick="window.location.href='signup.html'">Signup</button>
+        </div>
+    </nav>
+   
+    <section class="help-section">
+        <h2>How can we help you?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <div class="dropdown">
+            <label for="help-dropdown">What help do you need?</label>
+            <select id="help-dropdown">
+                <option value="" disabled selected>I would like to...</option>
+                <option value="consult">Consult a Doctor</option>
+                <option value="services">Explore Services</option>
+                <option value="faq">View FAQs</option>
+            </select>
+            <button onclick="redirect()">Go</button>
+        </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section class="offer-section">
+        <h3>WHAT WE OFFER</h3>
+        <p>Mindfulness Programs:</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
+
+   
+    <section class="image-placeholder">
+        <div class="placeholder-box"></div>
+    </section>
+
+    <section class="appointment-section">
+        <h1>Book an Appointment</h1>
+        <p>Schedule an appointment with our doctors.</p>
+
+        <form id="appointmentForm" onsubmit="submitAppointment(event)">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="contact">Your Contact:</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <label for="appointment-date">Preferred Appointment Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" required>
+
+            <label for="doctor">Choose Doctor:</label>
+            <select id="doctor" name="doctor" required>
+                <option value="" disabled selected>Select Doctor</option>
+                <option value="Dr. Smith">Dr. Smith</option>
+                <option value="Dr. Johnson">Dr. Johnson</option>
+                <option value="Dr. Lee">Dr. Lee</option>
+            </select>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

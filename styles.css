@@ -1,0 +1,431 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4F4F4; /* Light Gray */
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #2B7A9D; /* Dark Blue */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #3BB9F8; /* Light Blue */
+    border-radius: 4px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+    padding: 8px 15px;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+    background-color: #555;
+}
+
+/* Help Section */
+.help-section {
+    padding: 40px;
+    background-color: #A8E6CF; /* Soft Green */
+    text-align: center;
+}
+
+.help-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.help-section p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Dropdown Section */
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.dropdown button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown button:hover {
+    background-color: #555;
+}
+
+/* Offer Section */
+.offer-section {
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+}
+
+.offer-section h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.offer-section p {
+    font-size: 16px;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.placeholder-box {
+    width: 300px;
+    height: 200px;
+    background-color: #ccc;
+    border: 2px solid #999;
+}
+
+/* Authentication Section */
+.auth-section {
+    padding: 40px;
+    background-color: #A8E6CF; /* Soft Green */
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.auth-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.auth-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.auth-btn {
+    padding: 12px;
+    background-color: #2B7A9D; /* Dark Blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.auth-btn:hover {
+    background-color: #3BB9F8; /* Light Blue */
+}
+
+.auth-section p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.auth-section p a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.auth-section p a:hover {
+    color: #555;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 40px;
+    background-color: #A8E6CF; /* Soft Green */
+    text-align: center;
+}
+
+.faq-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-sidebar {
+    width: 25%;
+    padding-right: 20px;
+}
+
+.program-item button {
+    padding: 10px 20px; /* Adjust padding for button size */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s; /* Smooth transitions */
+}
+
+.program-item button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.program-item button:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+
+
+.faq-sidebar ul {
+    list-style-type: none;
+}
+
+.faq-sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+}
+
+.faq-sidebar ul li a:hover {
+    background-color: #ccc;
+}
+
+.faq-content {
+    width: 70%;
+}
+
+.faq-item {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faq-question {
+    background-color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none; /* Initially hidden */
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.faq-section h1 {
+    padding-bottom: 4rem;
+}
+
+/* Programs Section */
+.programs-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.program-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.program-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    background-color: white; /* Background for program items */
+}
+
+.program-item h2 {
+    margin-bottom: 10px;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Appointment Section */
+.appointment-section {
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white; /* White for contrast */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.appointment-section h1 {
+    margin-bottom: 20px;
+}
+
+.appointment-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.appointment-section label {
+    font-size: 16px;
+    text-align: left;
+}
+
+.appointment-section input,
+.appointment-section select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.appointment-section button {
+    padding: 12px;
+    background-color: #2B7A9D; /* Dark Blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.appointment-section button:hover {
+    background-color: #3BB9F8; /* Light Blue */
+}
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: white; /* White lines for the hamburger */
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide menu by default */
+        flex-direction: column; /* Stack vertically */
+        position: absolute;
+        background-color: #2B7A9D; /* Dark blue background */
+        top: 60px; /* Adjust according to your navbar height */
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    nav ul.active {
+        display: flex; /* Show when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger menu */
+    }
+}
