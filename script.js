@@ -8,7 +8,7 @@ function redirect() {
     } else if (selectedOption === "services") {
         window.location.href = "#services";
     } else if (selectedOption === "faq") {
-        window.location.href = "#faq";
+        window.location.href = "faq.html";
     } else {
         alert("Please select a valid option.");
     }
@@ -102,7 +102,15 @@ window.onclick = function(event) {
     }
 }
 
+
 function toggleMenu() {
     const navbar = document.getElementById('navbar');
+    const hamburger = document.querySelector('.hamburger');
     navbar.classList.toggle('active');
+    hamburger.classList.toggle('open');  // Add a class to animate the hamburger
+
+    // Optionally change icon appearance
+    hamburger.querySelectorAll('div').forEach(div => {
+        div.classList.toggle('active-line'); // Handle line transformations for animation
+    });
 }

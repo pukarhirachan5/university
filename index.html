@@ -18,7 +18,7 @@
         </div>
         <ul id="navbar">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="service.html">Services</a></li>
             <li><a href="programs.html">Programs</a></li>
             <li><a href="FAQ.html">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -34,14 +34,13 @@
     <section class="help-section">
         <h2>How can we help you?</h2>
         <p>At UniHealth, we are dedicated to promoting health and wellness by providing personalized healthcare solutions for individuals and families. Our mission is to make quality healthcare accessible and affordable for everyone, blending traditional care with innovative digital solutions.</p>
-
         <div class="dropdown">
             <label for="help-dropdown">What help do you need?</label>
             <select id="help-dropdown">
                 <option value="" disabled selected>I would like to...</option>
                 <option value="consult">Consult a Doctor</option>
                 <option value="services">Explore Services</option>
-                <option value="faq">View FAQs</option>
+                <option value="faq"><a href="FAQ.html">View FAQs</a></option>
             </select>
             <button onclick="redirect()">Go</button>
         </div>
@@ -49,42 +48,86 @@
 
     <!-- What We Offer Section -->
     <section class="offer-section">
-        <h3>WHAT WE OFFER</h3>
-        <p>Mindfulness Programs:</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="faq-content">
+            <h2>What we offer</h2>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Essential Health Benefits                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="faq-answer">
+                    <p>All Marketplace plans cover essential health benefits, such as:
+                        <ul><li>pediatric services, including oral and vision care (but adult dental and vision coverage aren’t essential health benefits)</li>
+                       <li>Inpatient and outpatient hospital care</li>
+                       <li> Prescription drug coverage</li>
+                        <li>Pregnancy and childbirth</li>
+                        <li>Mental health services</li></ul>
+                    </p>                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Quality Health Care
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="faq-answer">
+                    <p> High-quality health care helps prevent diseases and improve quality of life (Healthy People 2030).</p>     
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Medical Management Programs                     
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Some plans offer medical management programs for specific needs, such as weight management, back pain, and diabetes (Find out what Marketplace health insurance plans cover).</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Preventive Service                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Health care providers offer advice to quit smoking, vaccinations, and other preventive services to maintain overall well-being (Healthy People 2030).</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Dental and Vision Coverage                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Plans must offer dental coverage for children, and some plans include vision coverage for adults (Find out what Marketplace health insurance plans cover).</p>
+                </div>
+            </div>
+        </div>
+    
+
+ 
     </section>
 
    
-    <section class="image-placeholder">
-        <div class="placeholder-box"><img src="yoga.jpg" alt=""></div>
-    </section>
 
-    <section class="appointment-section">
-        <h1>Book an Appointment</h1>
-        <p>Schedule an appointment with our doctors.</p>
 
-        <form id="appointmentForm" onsubmit="submitAppointment(event)">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+   
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Pukar Hirachan. All Rights Reserved.</p>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
 
-            <label for="contact">Your Contact:</label>
-            <input type="text" id="contact" name="contact" required>
-
-            <label for="appointment-date">Preferred Appointment Date:</label>
-            <input type="date" id="appointment-date" name="appointment-date" required>
-
-            <label for="doctor">Choose Doctor:</label>
-            <select id="doctor" name="doctor" required>
-                <option value="" disabled selected>Select Doctor</option>
-                <option value="Dr. Smith">Dr. Smith</option>
-                <option value="Dr. Johnson">Dr. Johnson</option>
-                <option value="Dr. Lee">Dr. Lee</option>
-            </select>
-
-            <button type="submit">Book Appointment</button>
-        </form>
-    </section>
-
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <script src="script.js"></script>
 </body>

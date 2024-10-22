@@ -1,14 +1,26 @@
-/* Global Styles */
+
+
+
+.content {
+    flex: 1; /* Takes up the remaining space, pushing footer to the bottom */
+    padding: 20px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+.fo{
+   min-height: 81vh;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #F4F4F4; /* Light Gray */
     color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 /* Navigation Bar */
@@ -62,7 +74,9 @@ nav ul li a:hover {
 .signup-btn:hover {
     background-color: #555;
 }
-
+.faq-section, .appointment-section{
+    height: 81vh;
+}
 /* Help Section */
 .help-section {
     padding: 40px;
@@ -107,12 +121,84 @@ nav ul li a:hover {
 .dropdown button:hover {
     background-color: #555;
 }
+./* Container to center the FAQ section */
+
+
+.faq-content {
+    width: 100%;
+    max-width: 800px; /* Limit the max width of the FAQ content */
+    text-align: center; /* Center the heading text */
+    
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333; /* Adjust as needed */
+}
+
+/* Styles for the transparent FAQ item box */
+.faq-item {
+    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    border: 1px solid #ccc; /* Optional border */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a 3D effect */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect to add interactivity */
+.faq-item:hover {
+    transform: scale(1.05);
+}
+
+/* FAQ Question and Answer Behavior */
+.faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+}
+
+.faq-answer {
+    display: none;
+    padding-top: 10px;
+}
+
+.faq-item .arrow {
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+.faq-item.open .arrow {
+    transform: rotate(180deg); /* Rotate arrow when FAQ is open */
+}
+
+/* Optional responsive adjustments */
+@media (max-width: 768px) {
+    .faq-content {
+        width: 90%; /* Make sure content is responsive */
+    }
+}
+
 
 /* Offer Section */
 .offer-section {
-    padding: 40px;
-    text-align: center;
-    background-color: white;
+    background: url("yoga.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+         display: flex;
+        justify-content: center; /* Horizontal centering */
+        align-items: center;     /* Vertical centering */
+        min-height: 100vh;       /* Full height of the viewport */
+        padding: 20px;
+        background-color: #f0f0f0; /* Optional background color */
 }
 
 .offer-section h3 {
@@ -132,6 +218,7 @@ nav ul li a:hover {
 }
 
 .placeholder-box img{
+    
     width: 300px;
     height: 200px;
     background-color: #ccc;
@@ -201,6 +288,25 @@ nav ul li a:hover {
 .auth-section p a:hover {
     color: #555;
 }
+.appointment-section{
+    background-color: rgba(255, 255, 255, 0.2); /* White with 20% opacity */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+     backdrop-filter: blur(15px); /* Backdrop blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Semi-transparent border */
+}
+
+.auth-form input, .appointment-section input, .appointment-section select {
+    padding: 12px 15px; /* More padding for a better look */
+}
+
+.auth-btn, .appointment-section button {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+.auth-btn:hover, .appointment-section button:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 
 /* FAQ Section */
 .faq-section {
@@ -208,6 +314,13 @@ nav ul li a:hover {
     background-color: #A8E6CF; /* Soft Green */
     text-align: center;
 }
+.program-image {
+    width: 100%; /* Make the image span the entire width of the container */
+    height: 15rem; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add rounded corners to the image */
+    margin-bottom: 15px; /* Add some space below the image */
+}
+
 
 .faq-container {
     display: flex;
@@ -263,23 +376,10 @@ nav ul li a:hover {
 }
 
 .faq-item {
-    border: 1px solid #ccc;
-    margin: 10px 0;
-    border-radius: 5px;
+
     overflow: hidden;
 }
 
-.faq-question {
-    background-color: white;
-    padding: 15px;
-    cursor: pointer;
-}
-
-.faq-answer {
-    display: none; /* Initially hidden */
-    padding: 15px;
-    background-color: #f9f9f9;
-}
 
 .faq-section h1 {
     padding-bottom: 4rem;
@@ -326,11 +426,14 @@ nav ul li a:hover {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
+
 
 .close {
     color: #aaa;
@@ -427,5 +530,67 @@ nav ul li a:hover {
 
     .hamburger {
         display: flex; /* Show hamburger menu */
+    }
+    .faq-container {
+        flex-direction: column;
+    }
+    .faq-sidebar, .faq-content {
+        width: 100%;
+    }
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Social icons styling */
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f0a500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content p {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
     }
 }
